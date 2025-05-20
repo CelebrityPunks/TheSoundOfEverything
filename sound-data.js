@@ -602,6 +602,14 @@ const soundItems = [
         description: 'Fireworks',
         hint: 'Fireworks',
         category: 'Misc'
+    },
+    {
+        id: 'swallow',
+        icon: 'swallow.png',
+        sound: 'swallow.mp3',
+        description: 'Swallow',
+        hint: 'Swallow',
+        category: 'Animals'
     }
     // Add more sound items here as you create them
     // Example: { id: 'newSound', icon: 'newSound.png', sound: 'newSound.mp3', description: 'New Awesome Sound', category: 'SomeCategory' },

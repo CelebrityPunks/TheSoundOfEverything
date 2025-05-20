@@ -223,9 +223,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (wrongGuessCount >= 3) {
                 gameMessage.textContent = `Hint: ${currentMysterySound.hint}. That was not a ${clickedName}.`;
-                wrongGuessCount = 0;
             } else {
-                gameMessage.textContent = `No, that was not a ${clickedName}. Attempt ${wrongGuessCount} of 3 before hint.`;
+                gameMessage.textContent = `No, that was not a ${clickedName}.`;
             }
 
             clickedIconElement.classList.remove('incorrect-guess');
