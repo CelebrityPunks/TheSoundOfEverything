@@ -1,0 +1,902 @@
+/* =====================
+   Modern Soundboard Game Styles - Enhanced
+   ===================== */
+
+/* ---------- CSS Variables (Design‑Tokens) ---------- */
+:root {
+    /* Brand - Using a vibrant purple gradient palette */
+    --clr-primary: #111111;
+    --clr-primary-hover: #222222;
+    --clr-primary-active: #000000;
+    --clr-primary-light: #f5f5f5;
+    --clr-primary-50: #ffffff;
+  
+    /* Gradient */
+    --gradient-primary: linear-gradient(135deg, #7c3aed, #8b5cf6);
+    --gradient-secondary: linear-gradient(135deg, #3b82f6, #60a5fa);
+  
+    /* Semantic */
+    --clr-success: #10b981; /* emerald-500 */
+    --clr-success-light: rgba(16, 185, 129, 0.15);
+    --clr-danger: #ef4444; /* red-500 */
+    --clr-danger-light: rgba(239, 68, 68, 0.15);
+    --clr-info: #0ea5e9; /* sky-500 */
+    --clr-info-light: rgba(14, 165, 233, 0.15);
+  
+    /* Gray scale */
+    --gray-50: #ffffff;
+    --gray-100: #f5f5f5;
+    --gray-200: #e5e5e5;
+    --gray-300: #cccccc;
+    --gray-400: #b3b3b3;
+    --gray-500: #999999;
+    --gray-600: #666666;
+    --gray-700: #444444;
+    --gray-800: #222222;
+    --gray-900: #111111;
+  
+    /* Radius */
+    --radius-sm: 0.375rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1.25rem;
+    --radius-full: 2rem;
+  
+    /* Transitions */
+    --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.06);
+    --shadow-md: 0 4px 8px rgba(0,0,0,0.08);
+    --shadow-lg: 0 10px 20px rgba(0,0,0,0.10);
+    --shadow-xl: 0 20px 40px rgba(0,0,0,0.12);
+  
+    /* Container */
+    --container-padding: clamp(1rem, 5vw, 2rem);
+  
+    /* New color variable */
+    --clr-red-pink: #e74a5e; /* more red than pink */
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --clr-primary: #a78bfa; /* violet-400 */
+      --clr-primary-hover: #8b5cf6; /* violet-500 */
+      --clr-primary-active: #7c3aed; /* violet-600 */
+      --clr-primary-light: #c4b5fd; /* violet-300 */
+      --clr-primary-50: #2e1065; /* violet-950 */
+  
+      --gradient-primary: linear-gradient(135deg, #8b5cf6, #a78bfa);
+  
+      --clr-success: #34d399; /* emerald-400 */
+      --clr-success-light: rgba(52, 211, 153, 0.15);
+      --clr-danger: #f87171; /* red-400 */
+      --clr-danger-light: rgba(248, 113, 113, 0.15);
+  
+      --gray-50: #111827;
+      --gray-100: #1f2937;
+      --gray-200: #374151;
+      --gray-300: #4b5563;
+      --gray-400: #6b7280;
+      --gray-500: #9ca3af;
+      --gray-600: #d1d5db;
+      --gray-700: #e5e7eb;
+      --gray-800: #f3f4f6;
+      --gray-900: #f9fafb;
+  
+      --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+      --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.25);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+      --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+  
+      /* New color variable */
+      --clr-red-pink: #ff5a6a; /* lighter, more vibrant for dark mode */
+    }
+  }
+  
+  /* ---------- Global Reset & Base ---------- */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+  }
+  
+  body {
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    background: #fff;
+    color: var(--gray-900);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    position: relative;
+  }
+  
+  body::before { display: none; }
+  
+  /* ---------- Typography Utilities ---------- */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 700;
+    color: var(--gray-900);
+    line-height: 1.2;
+  }
+  
+  h1 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    letter-spacing: -0.025em;
+  }
+  
+  a {
+    color: var(--clr-primary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+    font-weight: 500;
+  }
+  
+  a:hover {
+    color: var(--clr-primary-hover);
+  }
+  
+  /* ---------- Layout ---------- */
+  .container {
+    width: 100%;
+    max-width: 1280px;
+    margin-inline: auto;
+    padding-inline: var(--container-padding);
+  }
+  
+  header {
+    background: #111;
+    border-radius: 32px;
+    box-shadow: 0 6px 32px 0 rgba(0,0,0,0.10);
+    margin: 2.5vh auto 2vh auto;
+    max-width: 900px;
+    padding: 2.5rem 2vw 2rem 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  header h1 {
+    font-family: 'Luckiest Guy', 'Inter', system-ui, sans-serif;
+    color: #fff;
+    font-size: 2.7rem;
+    font-weight: 900;
+    letter-spacing: 0.03em;
+    margin-bottom: 1.2rem;
+    text-align: center;
+  }
+  
+  nav {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+  }
+  
+  nav a {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.4rem 1.1rem;
+    border-radius: 10px;
+    background: none;
+    text-decoration: none;
+    transition: color 0.18s, background 0.18s;
+    position: relative;
+    outline: none;
+  }
+  
+  nav a.active, nav a:hover {
+    color: #111;
+    background: #fff;
+    text-underline-offset: 0.18em;
+  }
+  
+  /* ---------- Game Info Bar ---------- */
+  #game-info-bar {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    align-items: center;
+    padding: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+    margin-bottom: 1.5rem;
+  }
+  
+  #score-display, #timer-display {
+    font-size: 1.35rem;
+    font-weight: 900;
+    color: #111;
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0.2rem 0.8rem;
+  }
+  
+  /* ---------- Game Controls ---------- */
+  #game-controls {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    padding: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+    margin-bottom: 1.5rem;
+  }
+  
+  button {
+    appearance: none;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    padding: 0.85rem 2.2rem;
+    font: 900 1.25rem / 1.2 'Inter', system-ui, sans-serif;
+    border-radius: 2rem;
+    transition: all 0.18s;
+    background: #111;
+    color: #fff;
+    box-shadow: none;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-weight: 900;
+    font-size: 1.15rem;
+  }
+  
+  button:hover {
+    background: #fff;
+    color: #111;
+    border: 2px solid #111;
+  }
+  
+  button:disabled {
+    background: #eee;
+    color: #aaa;
+    border: none;
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+  
+  /* ---------- Game Message ---------- */
+  #game-message {
+    text-align: center;
+    min-height: 2.5rem;
+    margin: 1rem 0 2rem 0;
+    font-weight: 900;
+    color: #111;
+    padding: 0.75rem;
+    border-radius: 0.8rem;
+    background: none;
+    max-width: 600px;
+    margin-inline: auto;
+    font-size: 1.2rem;
+    box-shadow: none;
+  }
+  
+  /* ---------- Soundboard Grid ---------- */
+  #soundboard-grid,
+  #isometric-soundboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 2.2rem 2.2rem;
+    padding: 2.5rem 0 2rem 0;
+    width: 100%;
+    max-width: 1280px;
+    margin-inline: auto;
+    background: none;
+    border: none;
+    box-shadow: none;
+  }
+  
+  .sound-icon-container {
+    border-radius: var(--radius-xl);
+    border: none !important;
+    background: none !important;
+    box-shadow: none !important;
+    margin: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: box-shadow 0.2s, border-color 0.2s;
+  }
+  .sound-icon-container:hover {
+    border-color: var(--gray-700);
+    box-shadow: var(--shadow-md);
+  }
+  .sound-icon {
+    display: inline-block;
+    transition: transform 0.12s cubic-bezier(.4,2,.6,1);
+    will-change: transform;
+    background: transparent;
+    border: none !important;
+    border-radius: var(--radius-full);
+    box-shadow: none !important;
+    width: 80px;
+    height: 80px;
+    max-width: 80px;
+    max-height: 80px;
+  }
+  .sound-icon:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 0 4px var(--gray-300), 0 8px 24px 0 rgba(0,0,0,0.08);
+  }
+  .sound-icon:active {
+    transform: scale(0.88);
+  }
+  
+  /* ---------- Category Filters (Checkbox pills) ---------- */
+  #category-filters-section {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    justify-content: center;
+    margin: 2rem 0 1.2rem 0;
+  }
+  
+  #category-filters-section span {
+    color: #111;
+    font-weight: 700;
+    font-size: 1.1em;
+  }
+  
+  #category-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    justify-content: center;
+    padding: 0;
+  }
+  
+  .category-filter-item {
+    border: none;
+    background: none;
+    box-shadow: none;
+    margin: 0 0.2rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .category-filter-item:hover,
+  .category-filter-item input:checked + label {
+    border-color: #111;
+    box-shadow: none;
+  }
+  
+  #category-filters input[type="checkbox"] {
+    display: none;
+  }
+  
+  #category-filters label {
+    padding: 0.7rem 2.1rem;
+    background: #fff;
+    color: #111;
+    border-radius: 2rem;
+    font-size: 1.15rem;
+    font-weight: 900;
+    cursor: pointer;
+    border: 3px solid #111;
+    transition: color 0.2s, background 0.2s, border 0.2s;
+    user-select: none;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    letter-spacing: 0.03em;
+  }
+  
+  #category-filters input:checked + label {
+    background: #111;
+    color: #fff;
+    border: 3px solid #111;
+  }
+  
+  #category-filters label:hover {
+    color: #111;
+    background: #f3f3f3;
+  }
+  
+  /* ---------- Footer ---------- */
+  footer {
+    margin-top: auto;
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #fff;
+    border-top: 1px solid #eee;
+    background: #111;
+    border-radius: 0 0 32px 32px;
+  }
+  
+  footer a {
+    color: #fff;
+    font-weight: 600;
+  }
+  
+  /* ---------- Responsive Tweaks ---------- */
+  @media (max-width: 900px) {
+    .sound-icon {
+      width: 56px;
+      height: 56px;
+      max-width: 56px;
+      max-height: 56px;
+    }
+  }
+  
+  /* ---------- Animations ---------- */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  
+  /* Staggered animations for grid items */
+  #soundboard-grid > *,
+  #isometric-soundboard-grid > * {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  
+  #soundboard-grid > *:nth-child(1),
+  #isometric-soundboard-grid > *:nth-child(1) {
+    animation-delay: 0.05s;
+  }
+  
+  #soundboard-grid > *:nth-child(2),
+  #isometric-soundboard-grid > *:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+  
+  #soundboard-grid > *:nth-child(3),
+  #isometric-soundboard-grid > *:nth-child(3) {
+    animation-delay: 0.15s;
+  }
+  
+  #soundboard-grid > *:nth-child(4),
+  #isometric-soundboard-grid > *:nth-child(4) {
+    animation-delay: 0.2s;
+  }
+  
+  #soundboard-grid > *:nth-child(5),
+  #isometric-soundboard-grid > *:nth-child(5) {
+    animation-delay: 0.25s;
+  }
+  
+  /* Continue for more items as needed */
+  
+  /* ---------- Custom Scrollbar ---------- */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--gray-100);
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--gray-300);
+    border-radius: 10px;
+    border: 2px solid var(--gray-100);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--gray-400);
+  }
+  
+  /* ---------- Glass Morphism Effects ---------- */
+  .glass-effect, .main-content-container {
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 6px 32px 0 rgba(0,0,0,0.10);
+    margin: 0 auto 2.5vh auto;
+    max-width: 1400px;
+    padding: 2.5vh 2vw;
+  }
+  
+  .top-container {
+    border: 1.5px solid var(--gray-300);
+    box-shadow: var(--shadow-md);
+  }
+  
+  /* --- Sound Icon Enhancements --- */
+  .sound-icon-container {
+    border-radius: var(--radius-xl);
+    border: none !important;
+    background: none !important;
+    box-shadow: none !important;
+    margin: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: box-shadow 0.2s, border-color 0.2s;
+  }
+  .sound-icon-container:hover {
+    border-color: var(--gray-700);
+    box-shadow: var(--shadow-md);
+  }
+  .sound-icon {
+    display: inline-block;
+    transition: transform 0.12s cubic-bezier(.4,2,.6,1);
+    will-change: transform;
+    background: transparent;
+    border: none !important;
+    border-radius: var(--radius-full);
+    box-shadow: none !important;
+    width: 80px;
+    height: 80px;
+    max-width: 80px;
+    max-height: 80px;
+  }
+  .sound-icon:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 0 4px var(--gray-300), 0 8px 24px 0 rgba(0,0,0,0.08);
+  }
+  .sound-icon:active {
+    transform: scale(0.88);
+  }
+  
+  @keyframes icon-shake {
+    0% { transform: translateX(0); }
+    15% { transform: translateX(-6px); }
+    30% { transform: translateX(6px); }
+    45% { transform: translateX(-5px); }
+    60% { transform: translateX(5px); }
+    75% { transform: translateX(-3px); }
+    90% { transform: translateX(3px); }
+    100% { transform: translateX(0); }
+  }
+  .sound-icon.incorrect-guess {
+    animation: icon-shake 0.5s cubic-bezier(.36,.07,.19,.97) both !important;
+    box-shadow: 0 0 0 6px rgba(220, 38, 38, 0.35), 0 2px 8px 0 rgba(220,38,38,0.10) !important;
+    background: #fff !important;
+    border: 2px solid #ef4444 !important;
+  }
+  
+  .mascot-logo {
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
+    display: block;
+    position: absolute;
+    top: 24px;
+    left: 32px;
+    z-index: 2;
+  }
+  @media (max-width: 600px) {
+    .mascot-logo {
+      width: 56px;
+      height: 56px;
+      top: 12px;
+      left: 12px;
+    }
+  }
+  
+  #virtual-keyboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 18px;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .keyboard-pad {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #111;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 13px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    border-radius: 18px;
+    transition: box-shadow 0.18s, border-color 0.18s, background 0.18s;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.06);
+  }
+  .keyboard-pad .key-hint {
+    position: absolute;
+    top: 6px;
+    left: 8px;
+    font-size: 11px;
+    color: #aaa;
+  }
+  .pad-icon-container {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .pad-icon-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  .keyboard-pad .pad-sound-name {
+    font-weight: bold;
+    margin-top: 5px;
+    font-size: 1em;
+    color: #111;
+  }
+  .keyboard-pad:hover {
+    background: #f3f3f3;
+    border-color: #222;
+    box-shadow: 0 4px 16px 0 rgba(0,0,0,0.10);
+  }
+  .keyboard-pad.active {
+    background: #e0e0e0;
+    transform: scale(0.97);
+  }
+  .pad-add-btn {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #111;
+    color: #fff;
+    font-size: 1.5rem;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
+    transition: background 0.18s;
+    z-index: 2;
+  }
+  .pad-add-btn:hover {
+    background: #333;
+  }
+  .pad-remove-btn {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: none;
+    color: #111;
+    font-size: 1.1rem;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    transition: background 0.18s;
+    padding: 0;
+    font-weight: bold;
+    line-height: 1;
+  }
+  .pad-remove-btn:hover {
+    background: #eee;
+    color: #ef4444;
+  }
+  .sound-selector-popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border: 2px solid #111;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.18);
+    padding: 18px 18px 12px 18px;
+    z-index: 10;
+    min-width: 180px;
+    max-width: 220px;
+    max-height: 260px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .sound-selector-popup .sound-option {
+    padding: 7px 12px;
+    border-radius: 10px;
+    background: #f5f5f5;
+    color: #111;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1.5px solid #eee;
+    margin-bottom: 2px;
+    transition: background 0.15s, border 0.15s;
+  }
+  .sound-selector-popup .sound-option:hover {
+    background: #e0e0e0;
+    border: 1.5px solid #111;
+  }
+  .sound-selector-popup .close-popup-btn {
+    margin-top: 8px;
+    align-self: flex-end;
+    background: none;
+    border: none;
+    color: #ef4444;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  /* --- Virtual Keyboard Left Sound Grid --- */
+  #sound-selection-area {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(60px, 1fr));
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 340px;
+    margin-inline: auto;
+    justify-content: center;
+    align-items: start;
+    margin-bottom: 1.2rem;
+  }
+  .sound-selectable-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    background: #fff;
+    border: 2px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: border 0.18s, box-shadow 0.18s;
+  }
+  .sound-selectable-icon.selected {
+    border: 2.5px solid #111;
+    box-shadow: 0 0 0 3px #1112;
+  }
+  .sound-selectable-icon img {
+    width: 48px !important;
+    height: 48px !important;
+  }
+  
+  /* --- Pill Buttons for Recording/Metronome --- */
+  #recording-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+  }
+  
+  .pill-btn {
+    display: inline-block;
+    padding: 0.5rem 1.4rem;
+    border-radius: 2rem;
+    font-weight: 900;
+    font-size: 1.1rem;
+    border: 2.5px solid #111;
+    background: #fff;
+    color: #111;
+    margin-right: 0.7rem;
+    cursor: pointer;
+    transition: background 0.18s, color 0.18s, border 0.18s;
+    outline: none;
+    user-select: none;
+  }
+  .pill-btn.selected {
+    background: #111;
+    color: #fff;
+    border: 2.5px solid #111;
+  }
+  .pill-btn:active {
+    background: #222;
+    color: #fff;
+  }
+  
+  /* --- Record/Stop Buttons --- */
+  #record-loop-button.pill-btn {
+    background: #fff;
+    color: #ef4444;
+    border: 2.5px solid #ef4444;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    margin-right: 0.7rem;
+  }
+  #record-loop-button.pill-btn.selected {
+    background: #ef4444;
+    color: #fff;
+  }
+  #stop-loop-button.pill-btn {
+    background: #fff;
+    color: #111;
+    border: 2.5px solid #111;
+    border-radius: 10px;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+  }
+  #stop-loop-button.pill-btn.selected {
+    background: #111;
+    color: #fff;
+  }
+  
+  /* --- Stored Loops SVG Icon Buttons --- */
+  .stored-loop-btn {
+    background: none;
+    border: none;
+    padding: 0.2rem 0.4rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: background 0.15s;
+  }
+  .stored-loop-btn:active, .stored-loop-btn:focus {
+    background: #eee;
+  }
+  .stored-loop-btn svg {
+    width: 1.3em;
+    height: 1.3em;
+    display: block;
+    fill: #111;
+  }
+  
+  #recorded-loops-container {
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  #recorded-loops-list {
+    font-size: 1.1rem;
+    text-align: left;
+  }
+  
+  #recorded-loops-container img[alt="Stored Loops Border"] {
+    /* This rule is now obsolete as the image has been removed */
+    /* display: none; */ /* Or simply remove the rule */
+  }
+  

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soundboard Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="assets/tsoe.png" alt="TSOE Mascot Logo" class="mascot-logo">
+        <h1>The Sound Of Everything</h1>
+        <nav>
+            <a href="index.html" class="active">The Sound Game</a>
+            <a href="soundboard.html">Sound Explorer</a>
+            <a href="virtual_keyboard.html">ASMR Keyboard</a>
+        </nav>
+    </header>
+
+    <div id="category-filters-section">
+        <span>Filter</span>
+        <div id="category-filters">
+            <!-- Category checkboxes will be dynamically added here by JavaScript -->
+        </div>
+    </div>
+
+    <div id="game-info-bar" style="justify-content:center;gap:2.5rem;">
+        <div id="score-display">Score: 0 / 0</div>
+        <div id="timer-display">Time: 00:00</div>
+    </div>
+
+    <div id="game-controls" style="justify-content:center;gap:2rem;">
+        <button id="start-game-button">Start Game</button>
+        <button id="replay-sound-button" disabled>Hear Sound Again</button>
+    </div>
+
+    <div id="game-message" aria-live="polite"></div>
+
+    <main id="soundboard-grid">
+        <!-- Icons will be added here by JavaScript -->
+    </main>
+    <script src="sound-data.js"></script>
+    <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2025 The Sound Of Everything</p>
+        <p><a href="howtoplay.html">About</a></p>
+    </footer>
+</body>
+</html> 

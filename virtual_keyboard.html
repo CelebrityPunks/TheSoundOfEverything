@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Keyboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      .virtual-keyboard-layout {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2.5rem;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 2.5rem 0 0 0;
+      }
+      .vk-pads-center {
+        flex: 2 1 340px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
+      .vk-controls-right {
+        min-width: 220px;
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+        padding-inline: 1rem;
+      }
+      @media (max-width: 900px) {
+        .virtual-keyboard-layout {
+          flex-direction: column;
+          align-items: stretch;
+        }
+        .vk-pads-center, .vk-controls-right {
+          max-width: 100%;
+          min-width: 0;
+        }
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="assets/tsoe.png" alt="TSOE Mascot Logo" class="mascot-logo">
+        <h1>The Sound Of Everything</h1>
+        <nav>
+            <a href="index.html">The Sound Game</a>
+            <a href="soundboard.html">Sound Explorer</a>
+            <a href="virtual_keyboard.html" class="active">ASMR Keyboard</a>
+        </nav>
+    </header>
+    <div id="category-filters-section">
+        <span>Filter</span>
+        <div id="category-filters"></div>
+    </div>
+    <main>
+      <div class="virtual-keyboard-layout" style="display: flex; gap: 2.5rem; justify-content: center; align-items: flex-start; margin-top: 2.5rem; max-width: 1400px; margin-left: auto; margin-right: auto;">
+        <section class="vk-sounds-left" style="flex: 1 1 360px; display: flex; flex-direction: column; align-items: center; padding-right: 1rem;">
+          <div style="font-weight: 900; font-size: 1.25rem; margin-bottom: 1.2rem; text-align: center;">Add sounds to pad and record loops</div>
+          <div id="sound-selection-area"></div>
+        </section>
+        <section class="vk-pads-center" style="flex: 2 1 340px; display: flex; flex-direction: column; align-items: center; width: 100%;">
+          <div id="virtual-keyboard-grid"></div>
+        </section>
+        <section class="vk-controls-right" style="min-width: 220px; flex: 1 1 auto; display: flex; flex-direction: column; gap: 1.5rem; align-items: center; padding-inline: 1rem;">
+          <div id="recording-controls"></div>
+          <div id="metronome-controls"></div>
+          <div id="visual-loop-timer-container"></div>
+          <div id="playback-status" style="margin-top:10px; text-align:center;"></div>
+          
+          <div id="recorded-loops-container" style="margin-top: 20px; width: 100%; max-width: 400px;">
+            <h3 style="text-align: center; margin-top:0; margin-bottom: 0.8rem;">Stored Loops</h3>
+            <ul id="recorded-loops-list" style="list-style-type: none; padding: 0; width: 100%;">
+                <!-- Loop items will be populated here by JavaScript -->
+            </ul>
+          </div>
+
+        </section>
+      </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 The Sound Of Everything</p>
+        <p><a href="howtoplay.html">About</a></p>
+    </footer>
+    <script src="sound-data.js"></script>
+    <script src="virtual_keyboard.js"></script>
+</body>
+</html> 

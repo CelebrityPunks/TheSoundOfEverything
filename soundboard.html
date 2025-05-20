@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sound Of Everything</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="assets/tsoe.png" alt="TSOE Mascot Logo" class="mascot-logo">
+        <h1>The Sound Of Everything</h1>
+        <nav>
+            <a href="index.html">The Sound Game</a>
+            <a href="soundboard.html" class="active">Sound Explorer</a>
+            <a href="virtual_keyboard.html">ASMR Keyboard</a>
+        </nav>
+    </header>
+    <div id="category-filters-section">
+        <span>Filter</span>
+        <div id="category-filters">
+            <!-- Category checkboxes will be dynamically added here by JavaScript -->
+        </div>
+    </div>
+    <main>
+        <div id="isometric-soundboard-grid">
+            <!-- Sound icons will be dynamically inserted here by soundboard.js -->
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 The Sound Of Everything</p>
+        <p><a href="howtoplay.html">About</a></p>
+    </footer>
+    <script src="sound-data.js"></script>
+    <script src="soundboard.js"></script>
+</body>
+</html> 
