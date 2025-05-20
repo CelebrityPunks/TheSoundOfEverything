@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let totalSoundsInGame = 0;
     let gameTimerInterval = null;
     let gameStartTime = 0;
+    let wrongGuessCount = 0;
 
     let userHasInteracted = false;
     let audioContextForUnlock;
@@ -178,6 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!currentMysterySound) {
             endGame(); return;
         }
+        wrongGuessCount = 0;
         playCurrentMysterySound();
     }
 
@@ -199,6 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (guessedSoundId === currentMysterySound.id) {
             correctlyGuessedCount++;
             gameMessage.textContent = `Correct! It was: ${currentMysterySound.description}`;
+            wrongGuessCount = 0;
             clickedIconElement.classList.add('correct-guess');
             updateScoreDisplay();
             setTimeout(() => {
@@ -216,7 +219,15 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             // Get the clicked icon's name/description
             let clickedName = clickedIconElement.alt || clickedIconElement.dataset.soundId || 'that';
-            gameMessage.textContent = `No, that was not a ${clickedName}`;
+            wrongGuessCount++;
+
+            if (wrongGuessCount >= 3) {
+                gameMessage.textContent = `Hint: ${currentMysterySound.hint}. That was not a ${clickedName}.`;
+                wrongGuessCount = 0;
+            } else {
+                gameMessage.textContent = `No, that was not a ${clickedName}. Attempt ${wrongGuessCount} of 3 before hint.`;
+            }
+
             clickedIconElement.classList.remove('incorrect-guess');
             void clickedIconElement.offsetWidth;
             clickedIconElement.classList.add('incorrect-guess');

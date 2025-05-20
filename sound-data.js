@@ -8,6 +8,7 @@ const soundItems = [
         icon: 'mic.png',
         sound: 'mic.mp3',
         description: 'Microphone',
+        hint: 'Microphone',
         category: 'Misc'
     },
     {
@@ -15,6 +16,7 @@ const soundItems = [
         icon: 'drumbase.png',
         sound: 'drumbase.mp3',
         description: 'Drum Base',
+        hint: 'Drum Base',
         category: 'Instruments'
     },
     {
@@ -22,6 +24,7 @@ const soundItems = [
         icon: 'acoustic.png',
         sound: 'acoustic.mp3',
         description: 'Acoustic Guitar',
+        hint: 'Acoustic Guitar',
         category: 'Instruments'
     },
     {
@@ -29,6 +32,7 @@ const soundItems = [
         icon: 'electricguitar.png',
         sound: 'electricguitar.mp3',
         description: 'Electric Guitar',
+        hint: 'Electric Guitar',
         category: 'Instruments'
     },
     {
@@ -36,6 +40,7 @@ const soundItems = [
         icon: 'snare.png',
         sound: 'snare.mp3',
         description: 'Snare Drum',
+        hint: 'Snare Drum',
         category: 'Instruments'
     },
     {
@@ -43,6 +48,7 @@ const soundItems = [
         icon: 'cymbal.png',
         sound: 'cymbal.mp3',
         description: 'Cymbal',
+        hint: 'Cymbal',
         category: 'Instruments'
     },
     {
@@ -50,6 +56,7 @@ const soundItems = [
         icon: 'triangle.png',
         sound: 'triangle.mp3',
         description: 'Triangle',
+        hint: 'Triangle',
         category: 'Instruments'
     },
     {
@@ -57,6 +64,7 @@ const soundItems = [
         icon: 'tambourine.png',
         sound: 'tambourine.mp3',
         description: 'Tambourine',
+        hint: 'Tambourine',
         category: 'Instruments'
     },
     {
@@ -64,6 +72,7 @@ const soundItems = [
         icon: 'harp.png',
         sound: 'harp.mp3',
         description: 'Harp',
+        hint: 'Harp',
         category: 'Instruments'
     },
     {
@@ -71,6 +80,7 @@ const soundItems = [
         icon: 'cello.png',
         sound: 'cello.mp3',
         description: 'Cello',
+        hint: 'Cello',
         category: 'Instruments'
     },
     {
@@ -78,6 +88,7 @@ const soundItems = [
         icon: 'flute.png',
         sound: 'flute.mp3',
         description: 'Flute',
+        hint: 'Flute',
         category: 'Instruments'
     },
     {
@@ -85,6 +96,7 @@ const soundItems = [
         icon: 'trumpet.png',
         sound: 'trumpet.mp3',
         description: 'Trumpet',
+        hint: 'Trumpet',
         category: 'Instruments'
     },
     {
@@ -92,6 +104,7 @@ const soundItems = [
         icon: 'violin.png',
         sound: 'violin.mp3',
         description: 'Violin',
+        hint: 'Violin',
         category: 'Instruments'
     },
     {
@@ -99,6 +112,7 @@ const soundItems = [
         icon: 'piano.png',
         sound: 'piano.mp3',
         description: 'Piano',
+        hint: 'Piano',
         category: 'Instruments'
     },
     {
@@ -106,6 +120,7 @@ const soundItems = [
         icon: 'synth.png',
         sound: 'synth.mp3',
         description: 'Synthesizer',
+        hint: 'Synthesizer',
         category: 'Instruments'
     },
     {
@@ -113,6 +128,7 @@ const soundItems = [
         icon: 'sax.png',
         sound: 'sax.mp3',
         description: 'Saxophone',
+        hint: 'Saxophone',
         category: 'Instruments'
     },
     {
@@ -120,6 +136,7 @@ const soundItems = [
         icon: 'bagpipes.png',
         sound: 'bagpipes.mp3',
         description: 'Bagpipes',
+        hint: 'Bagpipes',
         category: 'Instruments'
     },
     {
@@ -127,6 +144,7 @@ const soundItems = [
         icon: 'kalimba.png',
         sound: 'kalimba.mp3',
         description: 'Kalimba',
+        hint: 'Kalimba',
         category: 'Instruments'
     },
     {
@@ -134,6 +152,7 @@ const soundItems = [
         icon: 'didgeridoo.png',
         sound: 'didgeridoo.mp3',
         description: 'Didgeridoo',
+        hint: 'Didgeridoo',
         category: 'Instruments'
     },
     {
@@ -141,6 +160,7 @@ const soundItems = [
         icon: 'accordion.png',
         sound: 'accordion.mp3',
         description: 'Accordion',
+        hint: 'Accordion',
         category: 'Instruments'
     },
     {
@@ -148,6 +168,7 @@ const soundItems = [
         icon: 'bongodrums.png',
         sound: 'bongodrums.mp3',
         description: 'Bongodrums',
+        hint: 'Bongodrums',
         category: 'Instruments'
     },
     {
@@ -155,6 +176,7 @@ const soundItems = [
         icon: 'xylophone.png',
         sound: 'xylophone.mp3',
         description: 'Xylophone',
+        hint: 'Xylophone',
         category: 'Instruments'
     },
     {
@@ -162,6 +184,7 @@ const soundItems = [
         icon: 'maracas.png',
         sound: 'maracas.mp3',
         description: 'Maracas',
+        hint: 'Maracas',
         category: 'Instruments'
     },
     {
@@ -169,6 +192,7 @@ const soundItems = [
         icon: 'wolf.png',
         sound: 'wolf.mp3',
         description: 'Wolf',
+        hint: 'Wolf',
         category: 'Animals'
     },
     {
@@ -176,6 +200,7 @@ const soundItems = [
         icon: 'turkey.png',
         sound: 'turkey.mp3',
         description: 'Turkey',
+        hint: 'Turkey',
         category: 'Animals'
     },
     {
@@ -183,6 +208,7 @@ const soundItems = [
         icon: 'bee.png',
         sound: 'bee.mp3',
         description: 'Bee',
+        hint: 'Bee',
         category: 'Animals'
     },
     {
@@ -190,6 +216,7 @@ const soundItems = [
         icon: 'snake.png',
         sound: 'snake.mp3',
         description: 'Snake',
+        hint: 'Snake',
         category: 'Animals'
     },
     {
@@ -197,6 +224,7 @@ const soundItems = [
         icon: 'monkey.png',
         sound: 'monkey.mp3',
         description: 'Monkey',
+        hint: 'Monkey',
         category: 'Animals'
     },
     {
@@ -204,6 +232,7 @@ const soundItems = [
         icon: 'lawnmower.png',
         sound: 'lawnmower.mp3',
         description: 'Lawnmower',
+        hint: 'Lawnmower',
         category: 'Misc'
     },
     {
@@ -211,6 +240,7 @@ const soundItems = [
         icon: 'rotatingbezel.png',
         sound: 'rotatingbezel.mp3',
         description: 'Rotating Bezel',
+        hint: 'Rotating Bezel',
         category: 'Misc'
     },
     {
@@ -218,6 +248,7 @@ const soundItems = [
         icon: 'Eatting Chips.png',
         sound: 'Eatting Chips.mp3',
         description: 'Eating Chips',
+        hint: 'Eating Chips',
         category: 'Misc'
     },
     {
@@ -225,6 +256,7 @@ const soundItems = [
         icon: 'parrot.png',
         sound: 'parrot.mp3',
         description: 'Parrot',
+        hint: 'Parrot',
         category: 'Animals'
     },
     {
@@ -232,6 +264,7 @@ const soundItems = [
         icon: 'fart.png',
         sound: 'fart.mp3',
         description: 'Fart',
+        hint: 'Fart',
         category: 'Misc'
     },
     {
@@ -239,6 +272,7 @@ const soundItems = [
         icon: 'swish.png',
         sound: 'swish.mp3',
         description: 'Swish',
+        hint: 'Swish',
         category: 'Misc'
     },
     {
@@ -246,6 +280,7 @@ const soundItems = [
         icon: 'bball.png',
         sound: 'bball.mp3',
         description: 'Basketball',
+        hint: 'Basketball',
         category: 'Misc'
     },
     {
@@ -253,6 +288,7 @@ const soundItems = [
         icon: 'boiling water.png',
         sound: 'boiling water.mp3',
         description: 'Boiling Water',
+        hint: 'Boiling Water',
         category: 'Nature & Ambient'
     },
     {
@@ -260,6 +296,7 @@ const soundItems = [
         icon: 'kickcan.png',
         sound: 'kickcan.mp3',
         description: 'Kick Can',
+        hint: 'Kick Can',
         category: 'Misc'
     },
     {
@@ -267,6 +304,7 @@ const soundItems = [
         icon: 'Crinkle.png',
         sound: 'Crinkle.mp3',
         description: 'Crinkle',
+        hint: 'Crinkle',
         category: 'Misc'
     },
     {
@@ -274,6 +312,7 @@ const soundItems = [
         icon: 'Crumple.png',
         sound: 'Crumple.mp3',
         description: 'Crumple',
+        hint: 'Crumple',
         category: 'Misc'
     },
     {
@@ -281,6 +320,7 @@ const soundItems = [
         icon: 'soda.png',
         sound: 'soda.mp3',
         description: 'Soda Can',
+        hint: 'Soda Can',
         category: 'Misc'
     },
     {
@@ -288,6 +328,7 @@ const soundItems = [
         icon: 'dolphin.png',
         sound: 'dolphin.mp3',
         description: 'Dolphin',
+        hint: 'Dolphin',
         category: 'Animals'
     },
     {
@@ -295,6 +336,7 @@ const soundItems = [
         icon: 'champagne.png',
         sound: 'champagne.mp3',
         description: 'Champagne Pop',
+        hint: 'Champagne Pop',
         category: 'Misc'
     },
     {
@@ -302,6 +344,7 @@ const soundItems = [
         icon: 'zipper.png',
         sound: 'zipper.mp3',
         description: 'Zipper',
+        hint: 'Zipper',
         category: 'Misc'
     },
     {
@@ -309,6 +352,7 @@ const soundItems = [
         icon: 'campfire.png',
         sound: 'campfire.mp3',
         description: 'Campfire',
+        hint: 'Campfire',
         category: 'Nature & Ambient'
     },
     {
@@ -316,6 +360,7 @@ const soundItems = [
         icon: 'ocean.png',
         sound: 'ocean.mp3',
         description: 'Ocean Waves',
+        hint: 'Ocean Waves',
         category: 'Nature & Ambient'
     },
     {
@@ -323,6 +368,7 @@ const soundItems = [
         icon: 'wind.png',
         sound: 'wind.mp3',
         description: 'Wind',
+        hint: 'Wind',
         category: 'Nature & Ambient'
     },
     {
@@ -330,6 +376,7 @@ const soundItems = [
         icon: 'thunder.png',
         sound: 'thunder.mp3',
         description: 'Thunder',
+        hint: 'Thunder',
         category: 'Nature & Ambient'
     },
     {
@@ -337,6 +384,7 @@ const soundItems = [
         icon: 'rain.png',
         sound: 'rain.mp3',
         description: 'Rain',
+        hint: 'Rain',
         category: 'Nature & Ambient'
     },
     {
@@ -344,6 +392,7 @@ const soundItems = [
         icon: 'train.png',
         sound: 'train.mp3',
         description: 'Train',
+        hint: 'Train',
         category: 'Misc'
     },
     {
@@ -351,6 +400,7 @@ const soundItems = [
         icon: 'foodprocessor.png',
         sound: 'foodprocessor.mp3',
         description: 'Food Processor',
+        hint: 'Food Processor',
         category: 'Misc'
     },
     {
@@ -358,6 +408,7 @@ const soundItems = [
         icon: 'seagull.png',
         sound: 'seagull.mp3',
         description: 'Seagull',
+        hint: 'Seagull',
         category: 'Animals'
     },
     {
@@ -365,6 +416,7 @@ const soundItems = [
         icon: 'bird.png',
         sound: 'bird.mp3',
         description: 'Bird Chirp',
+        hint: 'Bird Chirp',
         category: 'Animals'
     },
     {
@@ -372,6 +424,7 @@ const soundItems = [
         icon: 'lighter.png',
         sound: 'lighter.mp3',
         description: 'Lighter Flick',
+        hint: 'Lighter Flick',
         category: 'Misc'
     },
     {
@@ -379,6 +432,7 @@ const soundItems = [
         icon: 'cricket.png',
         sound: 'cricket.mp3',
         description: 'Cricket',
+        hint: 'Cricket',
         category: 'Animals'
     },
     {
@@ -386,6 +440,7 @@ const soundItems = [
         icon: 'servicebell.png',
         sound: 'servicebell.mp3',
         description: 'Service Bell',
+        hint: 'Service Bell',
         category: 'Misc'
     },
     {
@@ -393,6 +448,7 @@ const soundItems = [
         icon: 'curtain.png',
         sound: 'curtain.mp3',
         description: 'Curtain Sliding',
+        hint: 'Curtain Sliding',
         category: 'Misc'
     },
     {
@@ -400,6 +456,7 @@ const soundItems = [
         icon: 'toaster.png',
         sound: 'toaster.mp3',
         description: 'Toaster',
+        hint: 'Toaster',
         category: 'Misc'
     },
     {
@@ -407,6 +464,7 @@ const soundItems = [
         icon: 'knifechop.png',
         sound: 'knifechop.mp3',
         description: 'Knife Chop',
+        hint: 'Knife Chop',
         category: 'Misc'
     },
     {
@@ -414,6 +472,7 @@ const soundItems = [
         icon: 'mouseclick.png',
         sound: 'mouseclick.mp3',
         description: 'Mouse Click',
+        hint: 'Mouse Click',
         category: 'Misc'
     },
     {
@@ -421,6 +480,7 @@ const soundItems = [
         icon: 'keyboard.png',
         sound: 'keyboard.mp3',
         description: 'Keyboard Typing',
+        hint: 'Keyboard Typing',
         category: 'Misc'
     },
     {
@@ -428,6 +488,7 @@ const soundItems = [
         icon: 'cashregister.png',
         sound: 'cashregister.mp3',
         description: 'Cash Register',
+        hint: 'Cash Register',
         category: 'Misc'
     },
     {
@@ -435,6 +496,7 @@ const soundItems = [
         icon: 'lion.png',
         sound: 'lion.mp3',
         description: 'Lion',
+        hint: 'Lion',
         category: 'Animals'
     },
     {
@@ -442,6 +504,7 @@ const soundItems = [
         icon: 'frog.png',
         sound: 'frog.mp3',
         description: 'Frog',
+        hint: 'Frog',
         category: 'Animals'
     },
     {
@@ -449,6 +512,7 @@ const soundItems = [
         icon: 'elephant.png',
         sound: 'elephant.mp3',
         description: 'Elephant',
+        hint: 'Elephant',
         category: 'Animals'
     },
     {
@@ -456,6 +520,7 @@ const soundItems = [
         icon: 'owl.png',
         sound: 'owl.mp3',
         description: 'Owl',
+        hint: 'Owl',
         category: 'Animals'
     },
     {
@@ -463,6 +528,7 @@ const soundItems = [
         icon: 'goat.png',
         sound: 'goat.mp3',
         description: 'Goat',
+        hint: 'Goat',
         category: 'Animals'
     },
     {
@@ -470,6 +536,7 @@ const soundItems = [
         icon: 'duck.png',
         sound: 'duck.mp3',
         description: 'Duck',
+        hint: 'Duck',
         category: 'Animals'
     },
     {
@@ -477,6 +544,7 @@ const soundItems = [
         icon: 'sheep.png',
         sound: 'sheep.mp3',
         description: 'Sheep',
+        hint: 'Sheep',
         category: 'Animals'
     },
     {
@@ -484,6 +552,7 @@ const soundItems = [
         icon: 'horse.png',
         sound: 'horse.mp3',
         description: 'Horse',
+        hint: 'Horse',
         category: 'Animals'
     },
     {
@@ -491,6 +560,7 @@ const soundItems = [
         icon: 'pig.png',
         sound: 'pig.mp3',
         description: 'Pig',
+        hint: 'Pig',
         category: 'Animals'
     },
     {
@@ -498,6 +568,7 @@ const soundItems = [
         icon: 'dog.png',
         sound: 'dog.mp3',
         description: 'Dog',
+        hint: 'Dog',
         category: 'Animals'
     },
     {
@@ -505,6 +576,7 @@ const soundItems = [
         icon: 'cat.png',
         sound: 'cat.mp3',
         description: 'Cat',
+        hint: 'Cat',
         category: 'Animals'
     },
     {
@@ -512,6 +584,7 @@ const soundItems = [
         icon: 'cow.png',
         sound: 'cow.mp3',
         description: 'Cow',
+        hint: 'Cow',
         category: 'Animals'
     },
     {
@@ -519,6 +592,7 @@ const soundItems = [
         icon: 'chicken.png',
         sound: 'chicken.mp3',
         description: 'Chicken',
+        hint: 'Chicken',
         category: 'Animals'
     },
     {
@@ -526,7 +600,8 @@ const soundItems = [
         icon: 'fireworks.png',
         sound: 'fireworks.mp3',
         description: 'Fireworks',
-        category: 'Nature & Ambient'
+        hint: 'Fireworks',
+        category: 'Misc'
     }
     // Add more sound items here as you create them
     // Example: { id: 'newSound', icon: 'newSound.png', sound: 'newSound.mp3', description: 'New Awesome Sound', category: 'SomeCategory' },
