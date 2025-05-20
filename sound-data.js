@@ -492,6 +492,20 @@ const soundItems = [
         sound: 'boiling water.mp3',
         description: 'Boiling Water',
         category: 'Nature & Ambient'
+    },
+    {
+        id: 'fart',
+        icon: 'fart.png',
+        sound: 'fart.mp3',
+        description: 'Fart Sound',
+        category: 'Misc'
+    },
+    {
+        id: 'fireworks',
+        icon: 'fireworks.png',
+        sound: 'fireworks.mp3',
+        description: 'Fireworks Sound',
+        category: 'Misc'
     }
     // Add more sound items here as you create them
     // Example: { id: 'newSound', icon: 'newSound.png', sound: 'newSound.mp3', description: 'New Awesome Sound', category: 'SomeCategory' },
