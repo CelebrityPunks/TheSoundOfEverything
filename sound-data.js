@@ -235,13 +235,6 @@ const soundItems = [
         category: 'Misc'
     },
     {
-        id: 'fireworks',
-        icon: 'fireworks.png',
-        sound: 'fireworks.mp3',
-        description: 'Fireworks',
-        category: 'Nature & Ambient'
-    },
-    {
         id: 'swish',
         icon: 'swish.png',
         sound: 'swish.mp3',
@@ -534,13 +527,6 @@ const soundItems = [
         sound: 'rooster.mp3',
         description: 'Rooster',
         category: 'Animals'
-    },
-    {
-        id: 'fireworks',
-        icon: 'fireworks.png',
-        sound: 'fireworks.mp3',
-        description: 'Fireworks Sound',
-        category: 'Misc'
     }
     // Add more sound items here as you create them
     // Example: { id: 'newSound', icon: 'newSound.png', sound: 'newSound.mp3', description: 'New Awesome Sound', category: 'SomeCategory' },
