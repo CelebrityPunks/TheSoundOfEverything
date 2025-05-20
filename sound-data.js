@@ -522,11 +522,11 @@ const soundItems = [
         category: 'Animals'
     },
     {
-        id: 'rooster',
-        icon: 'rooster.png',
-        sound: 'rooster.mp3',
-        description: 'Rooster',
-        category: 'Animals'
+        id: 'fireworks',
+        icon: 'fireworks.png',
+        sound: 'fireworks.mp3',
+        description: 'Fireworks',
+        category: 'Nature & Ambient'
     }
     // Add more sound items here as you create them
     // Example: { id: 'newSound', icon: 'newSound.png', sound: 'newSound.mp3', description: 'New Awesome Sound', category: 'SomeCategory' },
