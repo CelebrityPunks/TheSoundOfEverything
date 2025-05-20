@@ -239,7 +239,7 @@ const soundItems = [
         icon: 'fireworks.png',
         sound: 'fireworks.mp3',
         description: 'Fireworks',
-        category: 'Nature'
+        category: 'Nature & Ambient'
     },
     {
         id: 'swish',
@@ -260,7 +260,7 @@ const soundItems = [
         icon: 'boiling water.png',
         sound: 'boiling water.mp3',
         description: 'Boiling Water',
-        category: 'Misc'
+        category: 'Nature & Ambient'
     },
     {
         id: 'kickcan',
@@ -316,35 +316,35 @@ const soundItems = [
         icon: 'campfire.png',
         sound: 'campfire.mp3',
         description: 'Campfire',
-        category: 'Nature'
+        category: 'Nature & Ambient'
     },
     {
         id: 'ocean',
         icon: 'ocean.png',
         sound: 'ocean.mp3',
         description: 'Ocean Waves',
-        category: 'Nature'
+        category: 'Nature & Ambient'
     },
     {
         id: 'wind',
         icon: 'wind.png',
         sound: 'wind.mp3',
         description: 'Wind',
-        category: 'Nature'
+        category: 'Nature & Ambient'
     },
     {
         id: 'thunder',
         icon: 'thunder.png',
         sound: 'thunder.mp3',
         description: 'Thunder',
-        category: 'Nature'
+        category: 'Nature & Ambient'
     },
     {
         id: 'rain',
         icon: 'rain.png',
         sound: 'rain.mp3',
         description: 'Rain',
-        category: 'Nature'
+        category: 'Nature & Ambient'
     },
     {
         id: 'train',
@@ -534,216 +534,6 @@ const soundItems = [
         sound: 'rooster.mp3',
         description: 'Rooster',
         category: 'Animals'
-    },
-    {
-        id: 'horse',
-        icon: 'horse.png',
-        sound: 'horse.mp3',
-        description: 'Horse',
-        category: 'Animals'
-    },
-    {
-        id: 'cricket',
-        icon: 'cricket.png',
-        sound: 'cricket.mp3',
-        description: 'Cricket',
-        category: 'Animals'
-    },
-    {
-        id: 'servicebell',
-        icon: 'servicebell.png',
-        sound: 'servicebell.mp3',
-        description: 'Service Bell',
-        category: 'Misc'
-    },
-    {
-        id: 'curtain',
-        icon: 'curtain.png',
-        sound: 'curtain.mp3',
-        description: 'Curtain',
-        category: 'Misc'
-    },
-    {
-        id: 'toaster',
-        icon: 'toaster.png',
-        sound: 'toaster.mp3',
-        description: 'Toaster',
-        category: 'Misc'
-    },
-    {
-        id: 'knifechop',
-        icon: 'knifechop.png',
-        sound: 'knifechop.mp3',
-        description: 'Knife Chop',
-        category: 'Misc'
-    },
-    {
-        id: 'mouseclick',
-        icon: 'mouseclick.png',
-        sound: 'mouseclick.mp3',
-        description: 'Mouse Click',
-        category: 'Misc'
-    },
-    {
-        id: 'keyboard',
-        icon: 'keyboard.png',
-        sound: 'keyboard.mp3',
-        description: 'Keyboard',
-        category: 'Misc'
-    },
-    {
-        id: 'cashregister',
-        icon: 'cashregister.png',
-        sound: 'cashregister.mp3',
-        description: 'Cash Register',
-        category: 'Misc'
-    },
-    {
-        id: 'seagull',
-        icon: 'seagull.png',
-        sound: 'seagull.mp3',
-        description: 'Seagull',
-        category: 'Animals'
-    },
-    {
-        id: 'bird',
-        icon: 'bird.png',
-        sound: 'bird.mp3',
-        description: 'Bird',
-        category: 'Animals'
-    },
-    {
-        id: 'lighter',
-        icon: 'lighter.png',
-        sound: 'lighter.mp3',
-        description: 'Lighter',
-        category: 'Misc'
-    },
-    {
-        id: 'foodprocessor',
-        icon: 'foodprocessor.png',
-        sound: 'foodprocessor.mp3',
-        description: 'Food Processor',
-        category: 'Misc'
-    },
-    {
-        id: 'campfire',
-        icon: 'campfire.png',
-        sound: 'campfire.mp3',
-        description: 'Campfire',
-        category: 'Nature & Ambient'
-    },
-    {
-        id: 'ocean',
-        icon: 'ocean.png',
-        sound: 'ocean.mp3',
-        description: 'Ocean',
-        category: 'Nature & Ambient'
-    },
-    {
-        id: 'wind',
-        icon: 'wind.png',
-        sound: 'wind.mp3',
-        description: 'Wind',
-        category: 'Nature & Ambient'
-    },
-    {
-        id: 'thunder',
-        icon: 'thunder.png',
-        sound: 'thunder.mp3',
-        description: 'Thunder',
-        category: 'Nature & Ambient'
-    },
-    {
-        id: 'rain',
-        icon: 'rain.png',
-        sound: 'rain.mp3',
-        description: 'Rain',
-        category: 'Nature & Ambient'
-    },
-    {
-        id: 'train',
-        icon: 'train.png',
-        sound: 'train.mp3',
-        description: 'Train',
-        category: 'Misc'
-    },
-    {
-        id: 'soda',
-        icon: 'soda.png',
-        sound: 'soda.mp3',
-        description: 'Soda Can',
-        category: 'Misc'
-    },
-    {
-        id: 'dolphin',
-        icon: 'dolphin.png',
-        sound: 'dolphin.mp3',
-        description: 'Dolphin',
-        category: 'Animals'
-    },
-    {
-        id: 'champagne',
-        icon: 'champagne.png',
-        sound: 'champagne.mp3',
-        description: 'Champagne Pop',
-        category: 'Misc'
-    },
-    {
-        id: 'zipper',
-        icon: 'zipper.png',
-        sound: 'zipper.mp3',
-        description: 'Zipper',
-        category: 'Misc'
-    },
-    {
-        id: 'crinkle',
-        icon: 'Crinkle.png',
-        sound: 'Crinkle.mp3',
-        description: 'Crinkle Sound',
-        category: 'Misc'
-    },
-    {
-        id: 'crumple',
-        icon: 'Crumple.png',
-        sound: 'Crumple.mp3',
-        description: 'Crumple Sound',
-        category: 'Misc'
-    },
-    {
-        id: 'kickcan',
-        icon: 'kickcan.png',
-        sound: 'kickcan.mp3',
-        description: 'Kick Can',
-        category: 'Misc'
-    },
-    {
-        id: 'swish',
-        icon: 'swish.png',
-        sound: 'swish.mp3',
-        description: 'Swish Sound',
-        category: 'Misc'
-    },
-    {
-        id: 'bball',
-        icon: 'bball.png',
-        sound: 'bball.mp3',
-        description: 'Basketball Bounce',
-        category: 'Misc'
-    },
-    {
-        id: 'boilingwater',
-        icon: 'boiling water.png',
-        sound: 'boiling water.mp3',
-        description: 'Boiling Water',
-        category: 'Nature & Ambient'
-    },
-    {
-        id: 'fart',
-        icon: 'fart.png',
-        sound: 'fart.mp3',
-        description: 'Fart Sound',
-        category: 'Misc'
     },
     {
         id: 'fireworks',
