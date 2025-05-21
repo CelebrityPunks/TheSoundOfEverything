@@ -141,10 +141,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
             img.addEventListener('click', async () => {
                 if (!audioContext) {
-                    unlockAudioPolicy(); // Ensure context is active
+                    // Attempt to unlock audio policy if not already done.
+                    // The document-level listeners should ideally handle this on the very first tap.
+                    unlockAudioPolicy(); 
                     if (!audioContext) {
-                         alert('Please click anywhere on the page first to enable audio, then try again.');
-                        return;
+                        console.warn('AudioContext still not initialized. Please tap the page once to enable audio.');
+                        return; // Exit if audio context is still not available
                     }
                 }
                 const audioBuffer = await loadSound(item); // Load on demand
