@@ -895,8 +895,3 @@
     text-align: left;
   }
   
-  #recorded-loops-container img[alt="Stored Loops Border"] {
-    /* This rule is now obsolete as the image has been removed */
-    /* display: none; */ /* Or simply remove the rule */
-  }
-  
